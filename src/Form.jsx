@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 const Form = () => {
-    const [color, setColor] = useState("");
+    const [color, setColor] = useState("#f15025");
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Form is submitted");
@@ -13,7 +13,7 @@ const Form = () => {
             <h4>Color Generator</h4>
             <form className="color-form" onSubmit={handleSubmit}>
                 <input type="color" value={color} onChange={(e) => setColor(e.target.value)} />
-                <input type="text" value={color} placeholder="#f15025" onChange={() => console.log("Hello Bety")} />
+                <input type="text" value={color} placeholder="#f15025" onChange={(e) => setColor(e.target.value)} />
                 <button type="submit" className="btn" style={{ backgroundColor: color }}>select</button>
             </form>
         </section>

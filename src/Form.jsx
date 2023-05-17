@@ -1,11 +1,10 @@
 import { useState } from "react"
 
-const Form = () => {
+const Form = ({ addColor }) => {
     const [color, setColor] = useState("#f15025");
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form is submitted");
-        console.log(color);
+        addColor(color);
     };
 
     return (
